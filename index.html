@@ -7,13 +7,15 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        
         <div id="main-container">
+            <header>
             <div id="title-container">
                 To-Do-List
             </div>
     
             <div id="operations-container">
-                <button class="operation-buttons">
+                <button class="operation-buttons" onclick=showForm()>
                     Add Task
                 </button>
     
@@ -26,14 +28,38 @@
                 </button>
     
             </div>
-    
+            </header>
+            <main>
             <div id="tasks-container">
                 <div id="pending-container" class="tasks-containers">
                     <div class="title">
                             Pending
                     </div>
     
-                    <div class="task-bar-containers">
+                    <div id="pending-task-bar-container" class="task-bar-containers">
+                        <div class="pending-tasks">
+                            <div class="date-or-time-containers">
+                                2025-08-13
+                            </div>
+                            <div class="title-and-description-containers">
+                                <div class="task-bar-titles">
+                                    New Title
+                                </div>
+                                <div class="task-bar-descriptions">
+                                    New Description
+                                </div>
+                            </div>
+                            <div class="date-or-time-containers">
+                                9 AM
+                                <div class="checkboxes delete-checkboxes red-background">
+
+                                </div>
+                                <div class="checkboxes done-checkboxes">
+
+                                </div>
+                            </div>
+
+                        </div>
     
                     </div>
     
@@ -62,9 +88,60 @@
                 </div>
     
             </div>
+            </main>
         </div>
 
         <div id="fill-up-form">
+            <div id="form-header">
+                New Task
+            </div>
+
+            <div id="inputs-and-buttons-container">
+                <div id="inputs-container">
+
+                    
+                    <form id="title-input-container" class="input-containers">
+                        <label for="title-input-bar">Title</label>
+                        <input type="text" id="title-input-bar">
+                    </form>
+    
+                    <form id="description-input-container" class="input-containers">
+                        <label for="description-input-bar">Description</label>
+                        <input type="text" id="description-input-bar">
+                    </form>
+    
+                    <form id="date-input-container" class="input-containers">
+                        <label for="date-input-bar">Date</label>
+                        <input type="date" id="date-input-bar" >
+                    </form>
+                    
+                    <form id="time-input-container" class="input-containers">
+                        <label for="time-input-bar">Time</label>
+                        <input type="time" id="time-input-bar">
+                    </form>
+    
+                 
+    
+                </div>
+
+                <div id="buttons-container">
+                    <button id="close-form-button" onclick=closeForm()>
+                        X
+                    </button>
+                    
+                    <button id="clear-form-button">
+                        Clear
+                    </button>
+
+                    <button id="create-task-button" onclick="createTask()">
+                        Create
+                    </button>
+
+                    
+
+                </div>
+
+            </div>
 
         </div>
 

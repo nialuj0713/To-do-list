@@ -1,4 +1,7 @@
-
+* {
+ 
+    font-family: cursive;
+}
 #title-container {
     display:flex;
     justify-content: center;
@@ -28,7 +31,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
     position: relative;
-    height: 80vh;
+    min-height: 80vh;
     width: 100vw;
     min-width: 100vw;
     border: solid black;
@@ -43,6 +46,7 @@
     font-weight: bold;
     font-size: 2rem;
     padding-bottom: 2vh; 
+    
 }
 
 .tasks-containers {
@@ -54,8 +58,6 @@
 
 .task-bar-containers {
     display: flex;
-    border: solid black;
-    height: 80%;
     width: 100%;
 }
 
@@ -69,14 +71,187 @@
     color: white;
 }
 
-/*#fill-up-form {
-    display: hidden;
-    position: absolute;
+#fill-up-form {
+    display: none;
+    position: fixed;
     height: 80%;
     width: 60%;
     border: solid black;
     z-index: 10;
     top: 10%;
-    left: 20%;  
-}*/
+    left: 20%;
+    background-color: lightblue;  
+    flex-direction: column;
+    box-sizing: content-box;
+}
+
+#main-container {
+    opacity: 1;
+}
+
+#form-header {
+    height: 10%;
+    width: 100%;
+    border-bottom: dashed black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+#inputs-and-buttons-container {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+
+#inputs-container {
+    height: 100%;
+    width: 90%;   
+}
+
+.input-containers {
+    width: 100%;
+    height: 25%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    column-gap: 5%;
+    width: 10%;
+}
+
+#clear-form-button {
+    height: 10%;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: darkred;
+}
+
+#create-task-button {
+    height: 10%;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: darkgreen;
+}
+
+input {
+    padding: 1%;
+    font-size: 1.1rem;
+    height: 20%;
+    width: 90%;
+}
+
+label {
+    font-size: 1.4rem;
+}
+
+form {
+    row-gap: 5%;
+}
+
+#close-form-button {
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    border: solid black;
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+    position: relative;
+    top: -93%;
+    left: 78%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.pending-tasks {
+    width: 100%;
+    display: flex;
+    border: solid black;
+    height: 20vh;
+    background-color: lightskyblue;
+    font-size: 0.8rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 4%;
+    box-sizing: border-box;
+}
+
+.title-and-description-containers {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    align-items: center;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+.task-bar-titles {
+    font-weight: bold;
+}
+.task-bar-descriptions {
+    font-size: 0.9rem;
+    width: 140%;
+    position: relative;
+    top: -18%;
+    text-align: center;
+}
+
+.checkboxes {
+    display: flex;
+    width: 4vw;
+    height: 8vh;
+    background-color: white;
+    border: solid black;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25vh;
+}
+
+.delete-checkboxes {
+    background-color: white;
+}
+
+.done-checkboxes {
+    background-color: white;
+    display: none;
+}
+
+.red-background {
+    background-color: red;
+}
+
+.date-or-time-containers {
+    width: 20%;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#pending-task-bar-container{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+
+
 
