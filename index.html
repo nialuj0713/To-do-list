@@ -19,12 +19,16 @@
                     Add Task
                 </button>
     
-                <button class="operation-buttons">
+                <button class="operation-buttons" onclick=showDeleteCheckboxes()>
                     Delete Task
                 </button>
     
-                <button class="operation-buttons">
+                <button class="operation-buttons" onclick=showMarkAsDoneCheckboxes()>
                     Mark As Complete
+                </button>
+
+                <button class="operation-buttons" onclick=clearAll()>
+                    Clear All
                 </button>
     
             </div>
@@ -38,7 +42,7 @@
     
                     <div id="pending-task-bar-container" class="task-bar-containers">
                         <div class="pending-tasks">
-                            <div class="date-or-time-containers">
+                            <div class="date-containers">
                                 2025-08-13
                             </div>
                             <div class="title-and-description-containers">
@@ -49,14 +53,17 @@
                                     New Description
                                 </div>
                             </div>
-                            <div class="date-or-time-containers">
+                            <div class="time-containers">
                                 9 AM
-                                <div class="checkboxes delete-checkboxes red-background">
+                                <!--
+                                     <div class="checkboxes delete-checkboxes red-background">
 
                                 </div>
                                 <div class="checkboxes done-checkboxes">
 
                                 </div>
+                                -->
+                               
                             </div>
 
                         </div>
@@ -70,7 +77,7 @@
                         Done
                     </div>
     
-                    <div class="task-bar-containers">
+                    <div id="done-task-bar-container" class="task-bar-containers">
     
                     </div>
     
@@ -81,7 +88,7 @@
                         Overdue
                     </div>
     
-                    <div class="task-bar-containers">
+                    <div id="overdue-task-bar-container" class="task-bar-containers">
     
                     </div>
     
@@ -141,6 +148,32 @@
 
                 </div>
 
+            </div>
+
+        </div>
+
+        <div id="delete-confirmation" class="hidden">
+            Are you sure to delete this/these?
+            <div>
+                <button id="cancel-delete" onclick=hideDeleteCheckboxes()>
+                    Cancel
+                </button>
+                <button id="confirm-delete" onclick=deleteTask()>
+                    Confirm
+                </button>
+            </div>
+
+        </div>
+
+        <div id="done-confirmation" class="hidden">
+            Are you sure to mark this/these items as done?
+            <div>
+                <button id="cancel-done" onclick=hideDoneCheckboxes()>
+                    Cancel
+                </button>
+                <button id="confirm-done" onclick=markAsDoneTask()>
+                    Confirm
+                </button>
             </div>
 
         </div>

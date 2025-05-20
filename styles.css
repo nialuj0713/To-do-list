@@ -193,6 +193,32 @@ header {
     box-sizing: border-box;
 }
 
+.done-tasks {
+    width: 100%;
+    display: flex;
+    border: solid black;
+    height: 20vh;
+    background-color: lightgreen;
+    font-size: 0.8rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 4%;
+    box-sizing: border-box;
+}
+
+.overdue-tasks {
+    width: 100%;
+    display: flex;
+    border: solid black;
+    height: 20vh;
+    background-color: red;
+    font-size: 0.8rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 4%;
+    box-sizing: border-box;
+}
+
 .title-and-description-containers {
     height: 100%;
     width: 60%;
@@ -215,41 +241,97 @@ header {
     text-align: center;
 }
 
-.checkboxes {
-    display: flex;
+.hidden {
+    display: none;
+}
+
+.delete-checkboxes {
+    background-color: white;
+    width: 4vw;
+    height: 8vh;
+    border: solid black;
+    box-sizing: border-box;
+    position: absolute;
+    
+    
+}
+
+.done-checkboxes {
     width: 4vw;
     height: 8vh;
     background-color: white;
     border: solid black;
     box-sizing: border-box;
     position: absolute;
-    top: 25vh;
-}
-
-.delete-checkboxes {
-    background-color: white;
-}
-
-.done-checkboxes {
-    background-color: white;
-    display: none;
 }
 
 .red-background {
     background-color: red;
 }
 
-.date-or-time-containers {
+.green-background {
+    background-color: green;
+}
+
+.date-containers {
     width: 20%;
     border: solid black;
     display: flex;
     flex-direction: column;
 }
 
+.checkbox-containers {
+    width: 20%;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
 #pending-task-bar-container{
     display: flex;
     flex-direction: column;
     border: none;
+}
+
+#done-task-bar-container{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+#overdue-task-bar-container{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.time-containers {
+    margin-top: 40%;
+}
+
+#delete-confirmation {
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    color: darkred;
+    text-align: center;
+    padding: 1%;
+    border-radius: 4%;
+}
+
+#done-confirmation {
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    color: darkgreen;
+    text-align: center;
+    padding: 1%;
+    border-radius: 4%;
 }
 
 
