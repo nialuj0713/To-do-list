@@ -262,6 +262,7 @@ function deleteTask(){
                 tasksFromLocalStorage.splice(j, 1)
                 localStorage.removeItem("pendingTasksInToDoList")
                 localStorage.setItem("pendingTasksInToDoList", JSON.stringify(tasksFromLocalStorage))
+                j--
             }
         }
         for (let j = 0; j < tasksFromLocalStorage2.length; j++){
@@ -269,6 +270,7 @@ function deleteTask(){
                 tasksFromLocalStorage2.splice(j, 1)
                 localStorage.removeItem("overdueTasks")
                 localStorage.setItem("overdueTasks", JSON.stringify(tasksFromLocalStorage2))
+                j--
             }
         }
 
@@ -342,9 +344,11 @@ function displayInOverdueTasks(){
     console.log(pendingTasks.length)
 
     for (let i = 0; i < pendingTasks.length; i++){
+        now.setHours(0, 0, 0, 0)
         if (pendingTasks[i].milliseconds < now.getTime()){
             overdueTasks.push(pendingTasks[i])
             pendingTasks.splice(i, 1)
+            i--
         }
     }
     console.log(pendingTasks.length)
@@ -520,6 +524,7 @@ function markAsDoneTask(){
                 tasksFromLocalStorage.splice(j, 1)
                 localStorage.removeItem("pendingTasksInToDoList")
                 localStorage.setItem("pendingTasksInToDoList", JSON.stringify(tasksFromLocalStorage))
+                j--
                 
             }
         }
@@ -531,6 +536,7 @@ function markAsDoneTask(){
                 tasksFromLocalStorageOverdue.splice(j, 1)
                 localStorage.removeItem("overdueTasks")
                 localStorage.setItem("overdueTasks", JSON.stringify(tasksFromLocalStorageOverdue))
+                j--
                 
             }
         }
